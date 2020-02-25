@@ -1,0 +1,13 @@
+//@Name: Weldensie Embaye (109391)
+
+
+1. setTimeout get executed based on the timer or after the delay finish. 
+However, setImmediate get excecuted immediately after the I/O eventhandlers finishs executing
+or it get queue after the last I/O handler.
+
+
+2.process nextTick does not queue after the I/O eventhandlers. However, it get executed after the current I/O completes
+ and before the second I/O starts. However, setImmediate get excecuted immediately after the I/O eventhandlers completes executing
+or it get queue after the last I/O handler.
+
+3. queueMicrotask, process, setTimeout, setImmediate, setInterval, URL, URLSearchParams, WebAssembly, TextDecoder, and TextEncoder.
